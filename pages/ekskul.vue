@@ -1,111 +1,82 @@
 <template>
-   <section class="product" id="product">
-        <div class="main-txt">
-            <h3>Daftar Ekstrakulikuler di <br> SMKN 4  TASIKMALAYA</h3>
-        </div>
-        <div class="review-content">
-            <div class="box">
-            <div class="img">
-                <img src="./images/pic-1.png" alt="">
+<div class="container my-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center mb-5">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/seni.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                    </div>
+                </div>
             </div>
-            <h3>Elon Musk</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, adipisci.</p>
-    
-        </div>
-            <div class="box">
-            <div class="img">
-                <img src="./images/pic-2.png" alt="">
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/basket.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 2</h5>
+                    </div>
+                </div>
             </div>
-            <h3>Elon Musk</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, adipisci.</p>
-    
-        </div>
-            <div class="box">
-            <div class="img">
-                <img src="./images/pic-3.png" alt="">
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/cj.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 3</h5>
+                    </div>
+                </div>
             </div>
-            <h3>Elon Musk</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, adipisci.</p>
-    
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/bola.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 4</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-    
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/laskar.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 1</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/english.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 2</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/rohis.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 3</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/perisai_diri.jpeg" class="card-img-top" alt="Card Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title 4</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    </section>
 </template>
 <style scoped>
-  .product{
-    padding: 10px 8% 120px;
-}
-.main-txt{
-    text-align: center;
-}
-.main-txt h3{
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #388b6f;
-    text-shadow: 0px 1px 1px black;
-}
-.card-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-    align-items: center;    
-    gap: 0.90rem;
-    margin-top: 30px;
-}
-.card-content .row{
-    background: #f3f3f3;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.row img{
-    width: 100%;
-    display: block;
-}
-.card-body{
-    padding: 10px;
-}
-.card-body h3{
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 550;
-    color: #388b6f;
-    text-shadow: 0px 1px 1px black;
-}
-.card-body p{
-    font-weight: 500;
-    margin-top: 5px;
-    letter-spacing: 1px;
-}
-.card-body h5{
-    margin-top: 5px;
-    font-size: 18px;
-}
-.card-body button{
-    width: 130px;
-    height: 30px;
-    font-weight: 550;
-    margin-top: 5px;
-    background: transparent;
-    color: #388b6f;
-    border-radius: 5px;
-    border: 2px solid #388b6f;
-    transition: 0.5s;
-    cursor: pointer;
-}
-.card-body button:hover{
-    background: #388b6f;
-    color: white;
-}
-@media (max-width:920px){
-    .card-content{
-        grid-template-columns: 1fr;
-    }
-}
 </style>

@@ -7,61 +7,22 @@
   <section class="offers">
     <div class="offer-content">
       <div class="row">
-        <i
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-person-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-            /></svg
-        ></i>
+        <i class="bi bi-person-fill"></i>
         <h3>1</h3>
         <p>GURU</p>
       </div>
       <div class="row">
-        <i
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-award-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z"
-            />
-            <path
-              d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"
-            /></svg
-        ></i>
+        <i class="bi bi-award-fill"></i>
         <h3>5</h3>
         <p>JURUSAN</p>
       </div>
       <div class="row">
-        <i
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-people-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
-            /></svg
-        ></i>
+        <i class="bi bi-people-fill"></i>
         <h3>0</h3>
         <p>MURID</p>
       </div>
       <div class="row">
-        <i class="bi bi-file-earmark-text"></i>
+        <i class="bi bi-person-workspace"></i>
         <h3>6</h3>
         <p>TATA USAHA</p>
       </div>
@@ -89,38 +50,18 @@
     </div>
     <div class="card-content">
       <div class="row">
-        <img src="assets/1.png" alt="" />
-        <div class="card-body">
-          <h3>Chair</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <button>Baca Selengkapnya</button>
+          <div v-for="teacher in teachers" :key="teacher.id" class="card" style="width: 18rem;margin-left: 3rem; margin-right: 2rem; margin-top: 2rem;">
+            <img :src="teacher.image" :alt="teacher.name" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h5 class="card-title ">{{ teacher.name }}</h5>
+                <a :href="teacher.subject" class="card-link">Selengkapnya</a> 
+            </div>
         </div>
       </div>
-      <div class="row">
-        <img src="assets/2.png" alt="" />
-        <div class="card-body">
-          <h3>Chair</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <button>Baca Selengkapnya</button>
-        </div>
       </div>
-      <div class="row">
-        <img src="assets/3.png" alt="" />
-        <div class="card-body">
-          <h3>Chair</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <button>Baca Selengkapnya</button>
-        </div>
+      <div class="d-grid gap-2 col-3 mx-auto mt-5">
+        <button @click="loadmore" class="btn btn-primary" type="button">Berita Lainnya</button>
       </div>
-      <div class="row">
-        <img src="assets/4.png" alt="" />
-        <div class="card-body">
-          <h3>Chair</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <button>Baca Selengkapnya</button>
-        </div>
-      </div>
-    </div>
   </section>
 </template>
 <style scoped>
@@ -344,3 +285,52 @@
   }
 }
 </style>
+<script setup>
+
+
+// Data guru dengan properti `image`
+const db_teachers = ref([
+  {
+    id: 1,
+    name: 'Honda Resmikan Safety Riding Lab di SMKN 4 Tasikmalaya',
+    subject:'https://www.pikiran-rakyat.com/otomotif/pr-018109177/honda-resmikan-safety-riding-lab-di-smkn-4-tasikmalaya-ciptakan-bibit-keselamatan-di-jawa-barat?page=all',
+    image: new URL('@/assets/news1.jpeg', import.meta.url).href  },
+  {
+    id: 2,
+    name: 'Aplikasi SIMORING, Solusi Kekinian dari Universitas BSI untuk PKL di SMKN 4 Tasikmalaya',
+    subject: 'https://news.bsi.ac.id/2024/07/31/aplikasi-simoring-solusi-kekinian-dari-universitas-bsi-untuk-pkl-di-smkn-4-tasikmalaya/',
+    image: new URL('@/assets/news2.jpeg', import.meta.url).href  },  
+  {
+    id: 3,
+    name: 'Cegah Geng Motor, SMKN di Tasikmalaya Luncurkan Ekstrakurikuler Unik',
+    subject: 'https://bandung.kompas.com/read/2024/07/24/115239678/cegah-geng-motor-smkn-di-tasikmalaya-luncurkan-ekstrakurikuler-unik',
+    image: new URL('@/assets/news3.jpeg', import.meta.url).href  },  
+  {
+    id: 4,
+    name: 'Polsek Cibeureum Sosialisasikan Larangan Knalpot Brong dan Geng Motor di SMKN 4 Kota Tasikmalaya',
+    subject: 'https://tasikmalaya.inews.id/read/502735/polsek-cibeureum-sosialisasikan-larangan-knalpot-brong-dan-geng-motor-di-smkn-4-kota-tasikmalaya',
+    image: new URL('@/assets/news4.jpeg', import.meta.url).href  }, 
+  {
+    id: 5,
+    name: 'Honda Edukasi Jurnalis di Tasikmalaya, dari Simulator Hingga Prediksi Bahaya di Jalan',
+    subject: 'https://radartasik.id/2024/07/24/honda-edukasi-jurnalis-di-tasikmalaya-dari-simulator-hingga-prediksi-bahaya-di-jalan/',
+    image: new URL('@/assets/news5.webp', import.meta.url).href  }, 
+  {
+    id: 6,
+    name: 'Siswa SMKN 4 Tasikmalaya Adu Inovasi dan Kreativitas di Expo Creanova',
+    subject: 'https://radartasik.id/2023/03/02/siswa-smkn-4-tasikmalaya-adu-inovasi-dan-kreativitas-di-expo-creanova/',
+    image: new URL('@/assets/news6.wwebp', import.meta.url).href  }, 
+]);
+
+// Ambil 5 data awal
+const teachers = ref([...db_teachers.value.slice(0, 3)]);
+const limitStart = ref(teachers.value.length); // Batas awal pengambilan data
+const limitEnd = ref(limitStart.value + 3); // Batas akhir pengambilan data
+
+// Fungsi memuat data baru dari db_teachers
+const loadmore = () => {
+  teachers.value = [...teachers.value, ...db_teachers.value.slice(limitStart.value, limitEnd.value)];
+  limitStart.value = limitEnd.value;
+  limitEnd.value += 3;
+};
+</script>

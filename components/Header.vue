@@ -7,7 +7,7 @@
             <div class="content">
                 <div class="logo"><a href="index.html"><img src="assets/LOGO.png" alt=""></a></div>
 
-                <ul class="links">
+                <ul class="links text-decoration-none">
                     <li>
                       <nuxt-link to="./"><a href="#" id="first">Beranda</a></nuxt-link>
                      </li>
@@ -61,9 +61,7 @@ nav .content .links li{
     list-style: none;
     line-height: 70px;
 }
-#first{
-    color: #388b6f;
-}
+
 .content .links li a,
 .content .links li label{
     color: black;

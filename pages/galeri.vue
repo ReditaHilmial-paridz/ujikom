@@ -1,56 +1,41 @@
 <template>
-  <div class="gallary">
-        <h3>Our Gallary</h3>
-        <div class="gallary-img">
-            <div class="img1">
-                <img src="assets/slide2.jpg" alt="">
-                <img src="assets/3.png" alt="">
+   <div class="container-fluid">
+        <div class="heading pt-4 ">
+            <h1 class="text-center text-black pt-4">  Gallery </h1>
+        </div>
+        <div class="row py-5 px-lg-5 px-sm-0">
+            <div class="column">
+                <img src="assets/1.png" class="h:scale-1" alt="" srcset="">
+                <img src="assets/3.png" alt="" srcset="">
             </div>
-            <div class="img1">
-                <img src="assets/1.png" alt="">
-                <img src="assets/slide3.jpg" alt="">
+            <div class="column">
+                <img src="assets/2.png" alt="" srcset="">
+                <img src="assets/3.png" alt="" srcset="">
+
+            </div>
+            <div class="column">
+                <img src="assets/3.png" alt="" srcset="">
+                <img src="assets/4.png" alt="" srcset="">
+            </div>
+            <div class="column">
+                <img src="assets/3.png" alt="" srcset="">
+                <img src="assets/4.png" alt="" srcset="">
             </div>
         </div>
-    </div>
+   </div>
 </template>
 <style scoped>
-  .gallary{
-    padding: 0px 8% 120px;
-}
-.gallary h3{
-    text-align: center;
-    font-size: 36px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: #388b6f;
-    text-shadow: 0px 1px 1px black;
-}
-.gallary-img{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-}
-.gallary-img img{
-    max-width: 530px;
-    height: auto;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.gallary-img img:hover{
-    transform: translateY(-10px);
-}
-@media (max-width:920px){
-    .gallary-img{
-        grid-template-columns: 1fr;
-    }
-    .gallary-img img{
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-}
+.row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+        .column {
+            grid-column: span 3;
+            width: auto;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 </style> 
