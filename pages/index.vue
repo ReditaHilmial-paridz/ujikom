@@ -8,7 +8,7 @@
     <div class="offer-content">
       <div class="row">
         <i class="bi bi-person-fill"></i>
-        <h3>1</h3>
+        <h3>60</h3>
         <p>GURU</p>
       </div>
       <div class="row">
@@ -18,13 +18,13 @@
       </div>
       <div class="row">
         <i class="bi bi-people-fill"></i>
-        <h3>0</h3>
+        <h3>1116</h3>
         <p>MURID</p>
       </div>
       <div class="row">
         <i class="bi bi-person-workspace"></i>
-        <h3>6</h3>
-        <p>TATA USAHA</p>
+        <h3>20</h3>
+        <p>ADMINISTRASI</p>
       </div>
     </div>
   </section>
@@ -34,14 +34,13 @@
     </div>
     <div class="about-text">
       <h3>SAMBUTAN KEPALA SEKOLAH</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nemo
-        maxime, eligendi nesciunt quis quaerat cupiditate rerum enim obcaecati
-        eum totam facilis, sunt tempore libero officia. Ad, excepturi. Qui,
-        voluptatem officia aspernatur iure nam, architecto quos molestiae
-        assumenda nesciunt porro voluptatum dolorum consequatur odit. Laudantium
-        saepe sunt perspiciatis dolores ex.
-      </p>
+      <p>Assalamu’alaikum Wr. Wb</p>
+            <p class="text-jutify">Segala puji dan syukur kehadirat Allah SWT, semoga kita semua dalam lindungan-Nya. dan atas ijin beliau kami dapat menyajikan website SMK Negeri 4 Tasikmalaya ini.
+                Kami berharap dengan adanya web site di SMK Negeri 4 Tasikmalaya ini para pengunjung dapat mengenal lebih jauh tentang sekolah kami sehingga dapat mempererat tali silaturrahmi antara sekolah dengan masyarakat demi kemajuan kita bersama.
+                Tiada gading yang tak retak, web site kami ini masih dalam proses pengembangan, masih banyak kekurangan yang harus kami perbaiki. Kritik dan sarannya yang membangun sangat kami harapkan untuk pengembangan ke depan.
+                Akhirnya, saya mengucapkan terimakasih yang sebesar- besarnya kepada semua pihak yang tidak dapat disebutkan satu persatu atas segala bantuan dan fasilitasnya yang telah diberikan semoga semua yang kita lakukan bermanfaat bagi masyarakat.
+                Wassalamu’alaikum Wr, Wb</p>
+            <p><strong>Kepala Sekolah</strong><br>Kurniawan, S.Pd., M.Pd.</p>
     </div>
   </section>
   <section class="product" id="product">
@@ -50,7 +49,7 @@
     </div>
     <div class="card-content">
       <div class="row">
-          <div v-for="teacher in teachers" :key="teacher.id" class="card" style="width: 18rem;margin-left: 3rem; margin-right: 2rem; margin-top: 2rem;">
+          <div v-for="teacher in teachers" :key="teacher.id" class="card" style="width: 18rem;margin-left: 3rem; margin-right: 2rem; margin-top: 2rem;margin-bottom: 2rem;">
             <img :src="teacher.image" :alt="teacher.name" class="card-img-top" alt="...">
             <div class="card-body text-center">
                 <h5 class="card-title ">{{ teacher.name }}</h5>
@@ -65,6 +64,7 @@
   </section>
 </template>
 <style scoped>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 .home {
   width: 100%;
   height: 100vh;
@@ -304,33 +304,33 @@ const db_teachers = ref([
     id: 3,
     name: 'Cegah Geng Motor, SMKN di Tasikmalaya Luncurkan Ekstrakurikuler Unik',
     subject: 'https://bandung.kompas.com/read/2024/07/24/115239678/cegah-geng-motor-smkn-di-tasikmalaya-luncurkan-ekstrakurikuler-unik',
-    image: new URL('@/assets/news3.jpeg', import.meta.url).href  },  
+    image: new URL('@/assets/news1.jpeg', import.meta.url).href  },  
   {
     id: 4,
     name: 'Polsek Cibeureum Sosialisasikan Larangan Knalpot Brong dan Geng Motor di SMKN 4 Kota Tasikmalaya',
     subject: 'https://tasikmalaya.inews.id/read/502735/polsek-cibeureum-sosialisasikan-larangan-knalpot-brong-dan-geng-motor-di-smkn-4-kota-tasikmalaya',
-    image: new URL('@/assets/news4.jpeg', import.meta.url).href  }, 
+    image: new URL('@/assets/news2.jpeg', import.meta.url).href  }, 
   {
     id: 5,
     name: 'Honda Edukasi Jurnalis di Tasikmalaya, dari Simulator Hingga Prediksi Bahaya di Jalan',
     subject: 'https://radartasik.id/2024/07/24/honda-edukasi-jurnalis-di-tasikmalaya-dari-simulator-hingga-prediksi-bahaya-di-jalan/',
-    image: new URL('@/assets/news5.webp', import.meta.url).href  }, 
+    image: new URL('@/assets/news1.jpeg', import.meta.url).href  }, 
   {
     id: 6,
     name: 'Siswa SMKN 4 Tasikmalaya Adu Inovasi dan Kreativitas di Expo Creanova',
     subject: 'https://radartasik.id/2023/03/02/siswa-smkn-4-tasikmalaya-adu-inovasi-dan-kreativitas-di-expo-creanova/',
-    image: new URL('@/assets/news6.wwebp', import.meta.url).href  }, 
+    image: new URL('@/assets/news2.jpeg', import.meta.url).href  }, 
 ]);
 
 // Ambil 5 data awal
-const teachers = ref([...db_teachers.value.slice(0, 3)]);
+const teachers = ref([...db_teachers.value.slice(0, 4)]);
 const limitStart = ref(teachers.value.length); // Batas awal pengambilan data
-const limitEnd = ref(limitStart.value + 3); // Batas akhir pengambilan data
+const limitEnd = ref(limitStart.value + 4); // Batas akhir pengambilan data
 
 // Fungsi memuat data baru dari db_teachers
 const loadmore = () => {
   teachers.value = [...teachers.value, ...db_teachers.value.slice(limitStart.value, limitEnd.value)];
   limitStart.value = limitEnd.value;
-  limitEnd.value += 3;
+  limitEnd.value += 4;
 };
 </script>
